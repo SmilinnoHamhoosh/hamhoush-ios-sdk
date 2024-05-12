@@ -1,7 +1,7 @@
 import Foundation
 
 @available(macOS 10.15.0, *)
-class ApiClient {
+public class ApiClient {
     let baseUrl: String
     var token: String?
 
