@@ -10,7 +10,7 @@ public class ApiClient {
         self.token = token
     }
 
-    func login(username: String, password: String) async throws -> String {
+    public func login(username: String, password: String) async throws -> String {
         let loginUrl = "\(baseUrl)/api/api/auth/login"
         let data = "username=\(username)&password=\(password)"
         let headers = [
@@ -46,7 +46,7 @@ public class ApiClient {
         }
     }
 
-    func chat(botId: String, message: String) async throws -> [String: Any] {
+    public func chat(botId: String, message: String) async throws -> [String: Any] {
         guard let token = token else {
             throw NSError(domain: "Network", code: 0, userInfo: [NSLocalizedDescriptionKey: "لطفا ابتدا لاگین کنید"])
         }
@@ -81,7 +81,7 @@ public class ApiClient {
         }
     }
 
-    func bots() async throws -> [String: Any] {
+    public func bots() async throws -> [String: Any] {
         guard let token = token else {
             throw NSError(domain: "Network", code: 0, userInfo: [NSLocalizedDescriptionKey: "لطفا ابتدا لاگین کنید"])
         }
