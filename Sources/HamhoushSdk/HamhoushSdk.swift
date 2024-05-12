@@ -5,7 +5,7 @@ public class ApiClient {
     let baseUrl: String
     var token: String?
 
-    init(baseUrl: String = "https://demo.hamhoushdk.ir", token: String? = nil) {
+    public init(baseUrl: String = "https://demo.hamhoushdk.ir", token: String? = nil) {
         self.baseUrl = baseUrl
         self.token = token
     }
